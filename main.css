@@ -1,6 +1,5 @@
 .fixtable-fixed {
     position: fixed;
-    top: 0;
     z-index: 101;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;

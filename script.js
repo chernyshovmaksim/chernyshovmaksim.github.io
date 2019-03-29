@@ -32,7 +32,8 @@ FixTable.prototype.StyleColumns = function() {
             'left': $(div_relat).offset().left - parseInt($(th).css('padding-left')) + 'px',
             'padding-top': $(div_relat).offset().top - $(inst.table).offset().top + 'px',
             'padding-left': $(th).css('padding-left'),
-            'padding-right': $(th).css('padding-right')
+            'padding-right': $(th).css('padding-right'),
+            'top': $('#topnav').outerHeight(true) + 'px'
         });
     });
 }
