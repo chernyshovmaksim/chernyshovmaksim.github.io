@@ -4,3 +4,13 @@
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
 }
+
+#topnav{
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
