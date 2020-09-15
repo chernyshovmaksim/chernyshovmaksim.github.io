@@ -2,302 +2,496 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>ООО Инженерные Системы</title>
-    <link href="./images/icon.svg" rel="icon" type="image/svg+xml">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>StomRating</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
 
-<div class="preload">
-    <div class="loader">
-    </div>
-</div>
-<header class="header">
-    <div class="container">
-        <div class="header__top">
-            <div class="logo">
-                <a href="/">
-                    <img alt="Инженерные Системы" src="./images/logo.svg" width="25px">
-                    <div class="logo__title">ООО Инженерные технологии</div>
-                </a>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Портфолио</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
-            <div id="my-menu">
-                <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Портфолио</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="mobile-menu">
-                <a href="#my-menu">
-                    <button class="hamburger hamburger--collapse" type="button">
-                          <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                          </span>
-                    </button>
-                </a>
-            </div>
-        </div>
-        <div class="header__middle">
-            <div class="slider">
-                <div class="hero">
-                    <div class="number">
-                        01 /
+    <header class="header">
+        <nav class="header__nav d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-2 nav__logo">
+                        <a href="/">
+                            <img src="./images/logo.png" alt="StomRating">
+                        </a>
                     </div>
-                    <h1>Монтаж отопительных систем</h1>
-                    <span>
-                            От 4000руб. погонный метр.
-                        </span>
+        
+                    <div class="col-xl-1 nav__search d-flex align-items-center">
+                        <a href="#" class="search d-flex justify-content-start align-items-center w-100">
+                            <div class="search__icon">
+                                <img src="./images/icon-search.svg" alt="Искать">
+                            </div>
+                            <div class="search__label ml-3">Поиск</div>
+                        </a>
+                    </div>
+        
+                    <div class="col-xl-9 d-flex align-items-center nav__menu">
+                        <ul class="d-flex ml-auto my-0">
+                            <li><a href="#">Лучшая CRM для стоматологии</a></li>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">Оборудование</a></li>
+                            <li><a href="#">Задать вопрос</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#" class="btn btn-primary">Вход</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="hero">
-                    <div class="number">
-                        02 /
-                    </div>
-                    <h1>Монтаж водоснабжения</h1>
-                    <span>
-                            От 5000руб. погонный метр.
-                        </span>
-                </div>
-                <div class="hero">
-                    <div class="number">
-                        03 /
-                    </div>
-                    <h1>
-                        Монтаж теплого пола
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-xl-12 d-flex flex-column align-items-start">
+                    <h1 class="hero__title">
+                        Рейтинг CRM для стоматологий
                     </h1>
-                    <span>
-                            От 120руб. погонный метр
+                    <span class="hero__text">
+                        Найдите лучшее программное обеспечение CRM для вашего бизнеса. Сравните обзоры продуктов и их характеристики и узнайте из нашего исследования программного обеспечения CRM
+                    </span>
+                    <a href="/" class="btn hero__btn btn-custom">Подобрать по параметрам</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Наименование</th>
+                                <th scope="col">Стоимость</th>
+                                <th scope="col">Версии</th>
+                                <th scope="col">Интеграция</th>
+                                <th scope="col">Внедрение</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class=" product-name">
+                                    <img class="border rounded" src="./images/thumbnail-for-table.png" alt="Stom PRO">
+                                    <span>Stom PRO</span>
+                                </td>
+                                <td class="product-price">
+                                    <span>7 990.00₽/мес</span>
+                                </td>
+                                <td class="product-version">
+                                    <div class="product-version__items">
+                                        <div class="product-version__item">
+                                            <div class="item__name">Облако</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                        <div class="product-version__item">
+                                            <div class="item__name">Коробка</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-error.svg" alt="Не поддерживается">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="product-integration text-primary">
+                                    190 сервисов
+                                </td>
+                                <td class="product-introduction">
+                                    <div class="product-introduction__items">
+                                        <div class="product-introduction__item">
+                                            <div class="item__name">Обучение</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                        <div class="product-introduction__item">
+                                            <div class="item__name">Перенос</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="product-links">
+                                    <a href="#" class="btn btn-custom">На сайт</a>
+                                    <a href="#" class="btn btn-custom">Обзор</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class=" product-name">
+                                    <img class="border rounded" src="./images/thumbnail-for-table.png" alt="Stom PRO">
+                                    <span>Stom PRO</span>
+                                </td>
+                                <td class="product-price">
+                                    <span>7 990.00₽/мес</span>
+                                </td>
+                                <td class="product-version">
+                                    <div class="product-version__items">
+                                        <div class="product-version__item">
+                                            <div class="item__name">Облако</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                        <div class="product-version__item">
+                                            <div class="item__name">Коробка</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-error.svg" alt="Не поддерживается">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="product-integration text-primary">
+                                    190 сервисов
+                                </td>
+                                <td class="product-introduction">
+                                    <div class="product-introduction__items">
+                                        <div class="product-introduction__item">
+                                            <div class="item__name">Обучение</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                        <div class="product-introduction__item">
+                                            <div class="item__name">Перенос</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="product-links">
+                                    <a href="#" class="btn btn-custom">На сайт</a>
+                                    <a href="#" class="btn btn-custom">Обзор</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class=" product-name">
+                                    <img class="border rounded" src="./images/thumbnail-for-table.png" alt="Stom PRO">
+                                    <span>Stom PRO</span>
+                                </td>
+                                <td class="product-price">
+                                    <span>7 990.00₽/мес</span>
+                                </td>
+                                <td class="product-version">
+                                    <div class="product-version__items">
+                                        <div class="product-version__item">
+                                            <div class="item__name">Облако</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                        <div class="product-version__item">
+                                            <div class="item__name">Коробка</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-error.svg" alt="Не поддерживается">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="product-integration text-primary">
+                                    190 сервисов
+                                </td>
+                                <td class="product-introduction">
+                                    <div class="product-introduction__items">
+                                        <div class="product-introduction__item">
+                                            <div class="item__name">Обучение</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                        <div class="product-introduction__item">
+                                            <div class="item__name">Перенос</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="product-links">
+                                    <a href="#" class="btn btn-custom">На сайт</a>
+                                    <a href="#" class="btn btn-custom">Обзор</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="show-more text-primary text-center w-100">
+                        <a href="/">Показать еще</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="usefull">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <h2 class="header-2">
+                        Полезно знать
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 usefull-news">
+                    <div class="news__poster">
+                        <a href="/">
+                            <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
+                        </a>
+                    </div>
+                    <div class="news__body">
+                        <div class="news__counter d-flex align-items-center">
+                            <div class="counter__icon">
+                                <img src="./images/icon-eye.svg" alt="Просмотров: 234">
+                            </div>
+                            <div class="counter__text">
+                                Просмотров: 234
+                            </div>
+                        </div>
+                        <div class="news__title">
+                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия</h3>
+                        </div>
+                        <div class="news__link mt-auto">
+                            <a href="/" class="d-flex align-items-center">
+                                <div class="link__text">Узнать больше</div>
+                                <div class="link__icon"><img src="./images/icon-right.svg" alt="Узнать больше"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 usefull-news">
+                    <div class="news__poster">
+                        <a href="/">
+                            <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
+                        </a>
+                    </div>
+                    <div class="news__body">
+                        <div class="news__counter d-flex align-items-center">
+                            <div class="counter__icon">
+                                <img src="./images/icon-eye.svg" alt="Просмотров: 234">
+                            </div>
+                            <div class="counter__text">
+                                Просмотров: 234
+                            </div>
+                        </div>
+                        <div class="news__title">
+                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия</h3>
+                        </div>
+                        <div class="news__link mt-auto">
+                            <a href="/" class="d-flex align-items-center">
+                                <div class="link__text">Узнать больше</div>
+                                <div class="link__icon"><img src="./images/icon-right.svg" alt="Узнать больше"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 usefull-news">
+                    <div class="news__poster">
+                        <a href="/">
+                            <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
+                        </a>
+                    </div>
+                    <div class="news__body">
+                        <div class="news__counter d-flex align-items-center">
+                            <div class="counter__icon">
+                                <img src="./images/icon-eye.svg" alt="Просмотров: 234">
+                            </div>
+                            <div class="counter__text">
+                                Просмотров: 234
+                            </div>
+                        </div>
+                        <div class="news__title">
+                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия</h3>
+                        </div>
+                        <div class="news__link mt-auto">
+                            <a href="/" class="d-flex align-items-center">
+                                <div class="link__text">Узнать больше</div>
+                                <div class="link__icon"><img src="./images/icon-right.svg" alt="Узнать больше"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 usefull-news">
+                    <div class="news__poster">
+                        <a href="/">
+                            <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
+                        </a>
+                    </div>
+                    <div class="news__body">
+                        <div class="news__counter d-flex align-items-center">
+                            <div class="counter__icon">
+                                <img src="./images/icon-eye.svg" alt="Просмотров: 234">
+                            </div>
+                            <div class="counter__text">
+                                Просмотров: 234
+                            </div>
+                        </div>
+                        <div class="news__title">
+                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия</h3>
+                        </div>
+                        <div class="news__link mt-auto">
+                            <a href="/" class="d-flex align-items-center">
+                                <div class="link__text">Узнать больше</div>
+                                <div class="link__icon"><img src="./images/icon-right.svg" alt="Узнать больше"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <h2 class="header-2">
+                        Отзывы о CRM               
+                    </h2>
+                    <div class="link-all-reviews">
+                        <a href="/">Все отзывы</a>
+                        <img src="./images/icon-right.svg" alt="Все отзывы">
+                    </div>
+                </div>
+            </div>
+            <div class="row reviews-wrapper">
+                <div class="col-xl-3 review">
+                    <div class="review__image">
+                        <img src="./images/review-photo.png" alt="Юлия Павлова">
+                    </div>
+                    <div class="review__name">Юлия Павлова, 28.09.20</div>
+                    <div class="review__title">Это лучшая CRM</div>
+                    <div class="review__message">
+                        <span class="review__text">
+                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
                         </span>
-                </div>
-            </div>
-            <div class="controlls">
-
-            </div>
-        </div>
-        <div class="header__bottom">
-            <div class="advantages">
-                <div class="advantage">
-                    <div class="advantage__icon">
-                        <img src="./images/001-shield.svg">
-                    </div>
-                    <div class="advantage__text">Гарантия на оборудование и монтаж</div>
-                </div>
-                <div class="advantage">
-                    <div class="advantage__icon">
-                        <img src="./images/002-gear.svg">
-                    </div>
-                    <div class="advantage__text">Оборудование на прямую от производителя</div>
-                </div>
-                <div class="advantage">
-                    <div class="advantage__icon">
-                        <img src="./images/003-idea.svg">
-                    </div>
-                    <div class="advantage__text">Экономия 30% благодаря индивидуальному подбору оборудования</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<main>
-    <section class="services">
-        <div class="container">
-            <h2 class="block-title">Услуги</h2>
-        </div>
-        <div class="container">
-            <div class="services__controlls">
-
-            </div>
-        </div>
-        <div class="container">
-            <div class="service">
-                <div class="service__body">
-                    <div class="service__header">
-                        <div class="service__number">
-                            01
-                        </div>
-                        <div class="service__title">
-                            Монтаж отопления
-                        </div>
-                    </div>
-                    <div class="service__description">
-                        Система отопления предназначена для искусственного обогрева частного дома или дачи. Польза
-                        от нее будет ощутима не только в отопительный сезон, но и в холодные летние ночи, ведь с ее
-                        помощью подогреть воду в батареях можно в любой момент. Автономная система отопления также
-                        позволяет регулировать температуру в доме и поддерживать ее на необходимом уровне.
-                    </div>
-                    <div class="service__more">
-                        <a href="#">Подробнее...</a>
+                        <a href="/">читать дальше</a>
                     </div>
                 </div>
-                <div class="service__poster">
-                    <img alt="" src="./images/1.jpg">
-                </div>
-            </div>
-            <div class="service">
-                <div class="service__body">
-                    <div class="service__header">
-                        <div class="service__number">
-                            02
-                        </div>
-                        <div class="service__title">
-                            Монтаж водоснабжения
-                        </div>
+                <div class="col-xl-3 review">
+                    <div class="review__image">
+                        <img src="./images/review-photo.png" alt="Юлия Павлова">
                     </div>
-                    <div class="service__description">
-                        Современный комфортный дом невозможно представить без эффективной системы отопления.
-                        Зачастую
-                        многие частные дома не подключены к централизованному отоплению и домовладельцу необходимо
-                        самостоятельно решать вопросы по установке отопительного котла, монтажу радиаторов отопления
-                        и
-                        подключению всей системы с последующим обслуживанием.
-                    </div>
-                    <div class="service__more">
-                        <a href="#">Подробнее...</a>
+                    <div class="review__name">Юлия Павлова, 28.09.20</div>
+                    <div class="review__title">Это лучшая CRM</div>
+                    <div class="review__message">
+                        <span class="review__text">
+                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
+                        </span>
+                        <a href="/">читать дальше</a>
                     </div>
                 </div>
-                <div class="service__poster">
-                    <img alt="" src="./images/1.jpg">
-                </div>
-            </div>
-            <div class="service">
-                <div class="service__body">
-                    <div class="service__header">
-                        <div class="service__number">
-                            03
-                        </div>
-                        <div class="service__title">
-                            Монтаж теплого пола
-                        </div>
+                <div class="col-xl-3 review">
+                    <div class="review__image">
+                        <img src="./images/review-photo.png" alt="Юлия Павлова">
                     </div>
-                    <div class="service__description">
-                        Современный комфортный дом невозможно представить без эффективной системы отопления.
-                        Зачастую
-                        многие частные дома не подключены к централизованному отоплению и домовладельцу необходимо
-                        самостоятельно решать вопросы по установке отопительного котла, монтажу радиаторов отопления
-                        и
-                        подключению всей системы с последующим обслуживанием.
-                    </div>
-                    <div class="service__more">
-                        <a href="#">Подробнее...</a>
+                    <div class="review__name">Юлия Павлова, 28.09.20</div>
+                    <div class="review__title">Это лучшая CRM</div>
+                    <div class="review__message">
+                        <span class="review__text">
+                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
+                        </span>
+                        <a href="/">читать дальше</a>
                     </div>
                 </div>
-                <div class="service__poster">
-                    <img alt="" src="./images/1.jpg">
+                <div class="col-xl-3 review">
+                    <div class="review__image">
+                        <img src="./images/review-photo.png" alt="Юлия Павлова">
+                    </div>
+                    <div class="review__name">Юлия Павлова, 28.09.20</div>
+                    <div class="review__title">Это лучшая CRM</div>
+                    <div class="review__message">
+                        <span class="review__text">
+                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
+                        </span>
+                        <a href="/">читать дальше</a>
+                    </div>
+                </div>
+                <div class="col-xl-3 review">
+                    <div class="review__image">
+                        <img src="./images/review-photo.png" alt="Юлия Павлова">
+                    </div>
+                    <div class="review__name">Юлия Павлова, 28.09.20</div>
+                    <div class="review__title">Это лучшая CRM</div>
+                    <div class="review__message">
+                        <span class="review__text">
+                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
+                        </span>
+                        <a href="/">читать дальше</a>
+                    </div>
+                </div>
+                <div class="col-xl-3 review">
+                    <div class="review__image">
+                        <img src="./images/review-photo.png" alt="Юлия Павлова">
+                    </div>
+                    <div class="review__name">Юлия Павлова, 28.09.20</div>
+                    <div class="review__title">Это лучшая CRM</div>
+                    <div class="review__message">
+                        <span class="review__text">
+                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
+                        </span>
+                        <a href="/">читать дальше</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="news">
         <div class="container">
-            <h2 class="block-title">Наши работы</h2>
-        </div>
-        <div class="container">
-            <div class="controlls">
-
+            <div class="row">
+                <div class="col-xl-12">
+                    <h2 class="header-2 text-center">Новости</h2>
+                </div>
             </div>
-            <div class="jobs">
-                <div class="job">
-                    <a data-fancybox="jobs" href="./images/2.jpg">
-                        <img alt="" src="./images/2.jpg">
-                    </a>
-                </div>
-                <div class="job">
-                    <a data-fancybox="jobs" href="./images/3.jpg">
-                        <img alt="" src="./images/3.jpg">
-                    </a>
-                </div>
-                <div class="job">
-                    <a data-fancybox="jobs" href="./images/4.jpg">
-                        <img alt="" src="./images/4.jpg">
-                    </a>
-                </div>
-                <div class="job">
-                    <a data-fancybox="jobs" href="#./images/5.jpg">
-                        <img alt="" src="./images/5.jpg">
-                    </a>
-                </div>
-                <div class="job">
-                    <a data-fancybox="jobs" href="./images/6.jpg">
-                        <img alt="" src="./images/6.jpg">
-                    </a>
-                </div>
-                <div class="job">
-                    <a data-fancybox="jobs" href="./images/7.jpg">
-                        <img alt="" src="./images/7.jpg">
-                    </a>
+            <div class="row">
+                <div class="col-xl-4 news__item">
+                    <div class="news__poster">
+                        <img src="./images/news-poster.png" alt="News name" class="img-rounded">
+                    </div>
+                    <div class="news__counter d-flex align-items-center">
+                        <div class="counter__icon">
+                            <img src="./images/icon-eye.svg" alt="Просмотров: 234">
+                        </div>
+                        <div class="counter__text">
+                            Просмотров: 234
+                        </div>
+                    </div>
+                    <div class="news__title">
+                        <h3 class="header-3">
+                            Новый способ профилактики кариеса с помощью наночистиц оксида церия
+                        </h3>
+                    </div>
+                    <div class="news__link mt-4">
+                        <a href="/" class="d-flex align-items-center">
+                            <div class="link__text">Узнать больше</div>
+                            <div class="link__icon"><img src="./images/icon-right.svg" alt="Узнать больше"></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="callback">
-        <div class="container">
-            <h2 class="block-title">Обратная связь</h2>
-        </div>
-        <div class="container">
-            <form class="form">
-                <div class="form-controll">
-                    <label for="name">Ваше имя</label>
-                    <input id="name" name="name"
-                           placeholder="Иванов Иван Иванович"
-                           required
-                           type="text">
-                </div>
-                <div class="form-controll">
-                    <label for="phone">Номер телефона</label>
-                    <input class="phone-in-form" id="phone"
-                           name="phone"
-                           placeholder="+7(000) 000-00-00"
-                           required
-                           type="tel">
-                </div>
-                <div class="form-controll">
-                    <label for="message">Ваше сообщение</label>
-                    <textarea id="message" name="message" placeholder="Текст вашего сообщения"></textarea>
-                </div>
-                <div class="form-controll">
-                    <button type="submit">Отправить</button>
-                </div>
-            </form>
-            <div class="contacts">
-                <h4>Мы в мессенджерах</h4>
-                <div class="contacts__social">
-                    <a href="#"><img alt="Telegram" src="./images/001-social-media-2.svg"></a>
-                    <a href="#"><img alt="WhatsApp" src="./images/002-social-media.svg"></a>
-                    <a href="#"><img alt="Viber" src="./images/003-social-media-1.svg"></a>
-                </div>
-                <h4>Мобильные контакты</h4>
-                <div class="contacts__address">
-                    <a href="#">+7 (922) 556 85 75</a>
-                    <a href="#">+7 (905) 812 19 84</a>
-                </div>
-                <h4>Email</h4>
-                <div class="contacts__address">
-                    <a href="#">chernyshovmaksim56@gmail.com</a>
-                    <a href="#">chibs007@mail.ru</a>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
 
-<script src="scripts/app.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
