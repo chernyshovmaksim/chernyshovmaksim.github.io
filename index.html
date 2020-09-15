@@ -5,9 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>StomRating</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css">
+
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
@@ -17,30 +21,35 @@
         <nav class="header__nav d-flex align-items-center">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-2 nav__logo">
+                    <div class="col-md-4 col-lg-2 col-5 nav__logo">
                         <a href="/">
                             <img src="./images/logo.png" alt="StomRating">
                         </a>
                     </div>
         
-                    <div class="col-xl-1 nav__search d-flex align-items-center">
+                    <div class="col-1 nav__search d-flex align-items-center">
                         <a href="#" class="search d-flex justify-content-start align-items-center w-100">
                             <div class="search__icon">
                                 <img src="./images/icon-search.svg" alt="Искать">
                             </div>
-                            <div class="search__label ml-3">Поиск</div>
+                            <div class="search__label ml-3 d-none d-xl-block">Поиск</div>
                         </a>
                     </div>
         
-                    <div class="col-xl-9 d-flex align-items-center nav__menu">
+                    <div class="col-xl-9 d-xl-flex d-none align-items-center nav__menu">
                         <ul class="d-flex ml-auto my-0">
                             <li><a href="#">Лучшая CRM для стоматологии</a></li>
                             <li><a href="#">Обучение</a></li>
                             <li><a href="#">Оборудование</a></li>
                             <li><a href="#">Задать вопрос</a></li>
                             <li><a href="#">Новости</a></li>
-                            <li><a href="#" class="btn btn-primary">Вход</a></li>
+                            <li><a data-fancybox data-src="#form-auth" href="javascript:;" class="btn btn-primary">Вход</a></li>
                         </ul>
+                    </div>
+
+                    <div style="display: none;" id="form-auth">
+                        <h2>Привет</h2>
+                        <p>Ждем, дизайн формы  🙃 </p>
                     </div>
                 </div>
             </div>
@@ -67,15 +76,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <table class="table">
+                    <table class="table table-products">
                         <thead>
                             <tr>
                                 <th scope="col">Наименование</th>
                                 <th scope="col">Стоимость</th>
-                                <th scope="col">Версии</th>
-                                <th scope="col">Интеграция</th>
-                                <th scope="col">Внедрение</th>
-                                <th scope="col"></th>
+                                <th class="no-sort" scope="col">Версии</th>
+                                <th class="no-sort" scope="col">Интеграция</th>
+                                <th class="no-sort" scope="col">Внедрение</th>
+                                <th class="no-sort" scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -85,7 +94,7 @@
                                     <span>Stom PRO</span>
                                 </td>
                                 <td class="product-price">
-                                    <span>7 990.00₽/мес</span>
+                                    <span>7 950.00₽/мес</span>
                                 </td>
                                 <td class="product-version">
                                     <div class="product-version__items">
@@ -123,8 +132,60 @@
                                     </div>
                                 </td>
                                 <td class="product-links">
-                                    <a href="#" class="btn btn-custom">На сайт</a>
-                                    <a href="#" class="btn btn-custom">Обзор</a>
+                                    <div class="text-right">
+                                        <a href="#" class="btn btn-custom">На сайт</a>
+                                        <a href="#" class="btn btn-custom">Обзор</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class=" product-name">
+                                    <img class="border rounded" src="./images/thumbnail-for-table.png" alt="Stom PRO">
+                                    <span>Stom PRO</span>
+                                </td>
+                                <td class="product-price">
+                                    <span>6 300.00₽/мес</span>
+                                </td>
+                                <td class="product-version">
+                                    <div class="product-version__items">
+                                        <div class="product-version__item">
+                                            <div class="item__name">Облако</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                        <div class="product-version__item">
+                                            <div class="item__name">Коробка</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-error.svg" alt="Не поддерживается">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="product-integration text-primary">
+                                    190 сервисов
+                                </td>
+                                <td class="product-introduction">
+                                    <div class="product-introduction__items">
+                                        <div class="product-introduction__item">
+                                            <div class="item__name">Обучение</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                        <div class="product-introduction__item">
+                                            <div class="item__name">Перенос</div>
+                                            <div class="item__icon">
+                                                <img src="./images/icon-success.svg" alt="Поддерживается">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="product-links">
+                                    <div class="text-right">
+                                        <a href="#" class="btn btn-custom">На сайт</a>
+                                        <a href="#" class="btn btn-custom">Обзор</a>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -171,56 +232,10 @@
                                     </div>
                                 </td>
                                 <td class="product-links">
-                                    <a href="#" class="btn btn-custom">На сайт</a>
-                                    <a href="#" class="btn btn-custom">Обзор</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class=" product-name">
-                                    <img class="border rounded" src="./images/thumbnail-for-table.png" alt="Stom PRO">
-                                    <span>Stom PRO</span>
-                                </td>
-                                <td class="product-price">
-                                    <span>7 990.00₽/мес</span>
-                                </td>
-                                <td class="product-version">
-                                    <div class="product-version__items">
-                                        <div class="product-version__item">
-                                            <div class="item__name">Облако</div>
-                                            <div class="item__icon">
-                                                <img src="./images/icon-success.svg" alt="Поддерживается">
-                                            </div>
-                                        </div>
-                                        <div class="product-version__item">
-                                            <div class="item__name">Коробка</div>
-                                            <div class="item__icon">
-                                                <img src="./images/icon-error.svg" alt="Не поддерживается">
-                                            </div>
-                                        </div>
+                                    <div class="text-right">
+                                        <a href="#" class="btn btn-custom">На сайт</a>
+                                        <a href="#" class="btn btn-custom">Обзор</a>
                                     </div>
-                                </td>
-                                <td class="product-integration text-primary">
-                                    190 сервисов
-                                </td>
-                                <td class="product-introduction">
-                                    <div class="product-introduction__items">
-                                        <div class="product-introduction__item">
-                                            <div class="item__name">Обучение</div>
-                                            <div class="item__icon">
-                                                <img src="./images/icon-success.svg" alt="Поддерживается">
-                                            </div>
-                                        </div>
-                                        <div class="product-introduction__item">
-                                            <div class="item__name">Перенос</div>
-                                            <div class="item__icon">
-                                                <img src="./images/icon-success.svg" alt="Поддерживается">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="product-links">
-                                    <a href="#" class="btn btn-custom">На сайт</a>
-                                    <a href="#" class="btn btn-custom">Обзор</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -243,7 +258,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-6 usefull-news">
+                <div class="col-md-6 col-12 usefull-news d-flex">
                     <div class="news__poster">
                         <a href="/">
                             <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
@@ -269,7 +284,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 usefull-news">
+                <div class="col-md-6 col-12 usefull-news d-flex">
                     <div class="news__poster">
                         <a href="/">
                             <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
@@ -295,7 +310,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 usefull-news">
+                <div class="col-md-6 col-12 usefull-news d-flex">
                     <div class="news__poster">
                         <a href="/">
                             <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
@@ -321,7 +336,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 usefull-news">
+                <div class="col-md-6 col-12 usefull-news d-flex">
                     <div class="news__poster">
                         <a href="/">
                             <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
@@ -455,7 +470,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-sm-6">
                     <div class="news__item">
                         <div class="news__poster">
                             <a href="/">
@@ -483,7 +498,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-sm-6">
                     <div class="news__item">
                         <div class="news__poster">
                             <a href="/">
@@ -513,7 +528,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-sm-6">
                     <div class="news__item">
                         <div class="news__poster">
                             <a href="/">
@@ -601,7 +616,6 @@
         </div>
     </section>
 
-
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -623,10 +637,13 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
 
     <script src="./js/main.js"></script>
 </body>
