@@ -299,11 +299,87 @@ body {
   background-color: #A5CFFC !important;
 }
 
+section.news {
+  margin-bottom: 120px;
+}
+
+section.news .container .row .news__item {
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  padding: 24px;
+}
+
 section.news .container .row .news__item .news__poster img {
   width: 100%;
 }
 
+section.news .container .row .news__item .news__counter {
+  margin: 24px 0;
+}
+
 section.news .container .row .news__item .news__counter .counter__icon {
   margin-right: 8px;
+}
+
+.instructions {
+  margin-bottom: 120px;
+}
+
+.instruction {
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 16px;
+}
+
+.instruction__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.instruction__title a {
+  color: #000000;
+}
+
+.instruction__icon a img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer {
+  background-color: #3E3E3E;
+}
+
+.footer .container .row .col-xl-12 {
+  min-height: 100px;
+}
+
+.footer__logo {
+  margin-right: 106px;
+}
+
+.footer__logo a img {
+  margin-top: -20px !important;
+}
+
+.footer__name {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.footer__contacts {
+  color: #fff;
+  margin-left: auto;
+}
+
+.footer__contacts span {
+  font-weight: bold;
+}
+
+.footer__contacts a {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
