@@ -29,6 +29,18 @@
   }
 }
 
+@media (max-width: 768px) {
+  .header-2 {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 24px auto;
+  }
+  .header-3 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -73,6 +85,7 @@ body {
 
 .header .header__nav .nav__menu ul li:first-child {
   margin-left: 0 !important;
+  padding-left: 0 !important;
 }
 
 .header .header__nav .nav__menu ul li:last-child {
@@ -85,6 +98,15 @@ body {
 
 .header .header__nav .nav__menu ul li a {
   color: #171818;
+}
+
+.header .header__nav .hamburger {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero {
@@ -133,6 +155,7 @@ body {
 
 .grid-products .table tbody tr .product-name {
   vertical-align: middle;
+  padding-left: 0 !important;
 }
 
 .grid-products .table tbody tr .product-name span {
@@ -203,6 +226,14 @@ body {
 
 table.dataTable.no-footer {
   border-bottom: none !important;
+}
+
+.dtr-details {
+  width: 100% !important;
+}
+
+.dtr-details .dtr-title {
+  margin-bottom: 24px;
 }
 
 .usefull-news {
@@ -392,6 +423,9 @@ section.news .container .row .news__item .news__counter .counter__icon {
 }
 
 @media (max-width: 1200px) {
+  .header .nav__search {
+    margin-left: auto !important;
+  }
   .usefull .usefull-news {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -403,6 +437,9 @@ section.news .container .row .news__item .news__counter .counter__icon {
   }
   .usefull .usefull-news .news__body {
     margin-left: 0 !important;
+  }
+  .news .container .row .col-xl-4 {
+    margin-top: 30px;
   }
   .footer {
     padding: 24px;
@@ -470,6 +507,18 @@ section.news .container .row .news__item .news__counter .counter__icon {
   }
   .slick-arrow.slick-next {
     right: 0px !important;
+  }
+  .hero .hero__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .reviews .header-2 {
+    text-align: center;
+  }
+  .reviews .link-all-reviews {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    text-align: center;
   }
 }
 

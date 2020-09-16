@@ -1,4 +1,21 @@
+document.addEventListener(
+    "DOMContentLoaded", () => {
+        const menu = new MmenuLight(
+            document.querySelector("#mobile-menu")
+        );
 
+        const navigator = menu.navigation({
+            title: 'Рейтинг CRM для стоматологий'
+        });
+        const drawer = menu.offcanvas();
+
+        document.querySelector('a[href="#mobile-menu"]')
+            .addEventListener('click', (evnt) => {
+                evnt.preventDefault();
+                drawer.open();
+            });
+    }
+);
 
 
 

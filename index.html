@@ -5,12 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>StomRating</title>
-    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="./styles/mmenu-light.css">
 
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -21,12 +23,12 @@
         <nav class="header__nav d-flex align-items-center">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 col-lg-2 col-5 nav__logo">
+                    <div class="col-2 nav__logo">
                         <a href="/">
                             <img src="./images/logo.png" alt="StomRating">
                         </a>
                     </div>
-        
+
                     <div class="col-1 nav__search d-flex align-items-center">
                         <a href="#" class="search d-flex justify-content-start align-items-center w-100">
                             <div class="search__icon">
@@ -35,24 +37,42 @@
                             <div class="search__label ml-3 d-none d-xl-block">Поиск</div>
                         </a>
                     </div>
-        
-                    <div class="col-xl-9 d-xl-flex d-none align-items-center nav__menu">
+
+                    <div class="hamburger col-2 col-sm-1 d-xl-none d-flex align-items-center justify-content-end">
+                        <a href="#mobile-menu">
+                            <img src="./images/hamburger.svg" alt="Мобильное меню">
+                        </a>
+                    </div>
+
+                    <div class="col-9 d-xl-flex d-none align-items-center nav__menu">
                         <ul class="d-flex ml-auto my-0">
                             <li><a href="#">Лучшая CRM для стоматологии</a></li>
                             <li><a href="#">Обучение</a></li>
                             <li><a href="#">Оборудование</a></li>
                             <li><a href="#">Задать вопрос</a></li>
                             <li><a href="#">Новости</a></li>
-                            <li><a data-fancybox data-src="#form-auth" href="javascript:;" class="btn btn-primary">Вход</a></li>
+                            <li><a data-fancybox data-src="#form-auth" href="javascript:;"
+                                    class="btn btn-primary">Вход</a></li>
                         </ul>
                     </div>
 
                     <div style="display: none;" id="form-auth">
                         <h2>Привет</h2>
-                        <p>Ждем, дизайн формы  🙃 </p>
+                        <p>Ждем, дизайн формы 🙃 </p>
                     </div>
                 </div>
             </div>
+
+            <nav id="mobile-menu">
+                <ul>
+                    <li><a href="#">Лучшая CRM для стоматологии</a></li>
+                    <li><a href="#">Обучение</a></li>
+                    <li><a href="#">Оборудование</a></li>
+                    <li><a href="#">Задать вопрос</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a data-fancybox data-src="#form-auth" href="javascript:;">Вход</a></li>
+                </ul>
+            </nav>
         </nav>
     </header>
 
@@ -64,7 +84,8 @@
                         Рейтинг CRM для стоматологий
                     </h1>
                     <span class="hero__text">
-                        Найдите лучшее программное обеспечение CRM для вашего бизнеса. Сравните обзоры продуктов и их характеристики и узнайте из нашего исследования программного обеспечения CRM
+                        Найдите лучшее программное обеспечение CRM для вашего бизнеса. Сравните обзоры продуктов и их
+                        характеристики и узнайте из нашего исследования программного обеспечения CRM
                     </span>
                     <a href="/" class="btn hero__btn btn-custom">Подобрать по параметрам</a>
                 </div>
@@ -90,8 +111,10 @@
                         <tbody>
                             <tr>
                                 <td class=" product-name">
-                                    <img class="border rounded" src="./images/thumbnail-for-table.png" alt="Stom PRO">
-                                    <span>Stom PRO</span>
+                                    <div class="d-flex align-items-center">
+                                        <img class="border rounded" src="./images/thumbnail-for-table.png" alt="Stom PRO">
+                                        <span>Stom PRO</span>
+                                    </div>
                                 </td>
                                 <td class="product-price">
                                     <span>7 950.00₽/мес</span>
@@ -140,11 +163,13 @@
                             </tr>
                             <tr>
                                 <td class=" product-name">
-                                    <img class="border rounded" src="./images/thumbnail-for-table.png" alt="Stom PRO">
-                                    <span>Stom PRO</span>
+                                    <div class="d-flex align-items-center">
+                                        <img class="border rounded" src="./images/thumbnail-for-table.png" alt="Stom PRO">
+                                        <span>Stom PRO</span>
+                                    </div>
                                 </td>
                                 <td class="product-price">
-                                    <span>6 300.00₽/мес</span>
+                                    <span>7 950.00₽/мес</span>
                                 </td>
                                 <td class="product-version">
                                     <div class="product-version__items">
@@ -190,11 +215,13 @@
                             </tr>
                             <tr>
                                 <td class=" product-name">
-                                    <img class="border rounded" src="./images/thumbnail-for-table.png" alt="Stom PRO">
-                                    <span>Stom PRO</span>
+                                    <div class="d-flex align-items-center">
+                                        <img class="border rounded" src="./images/thumbnail-for-table.png" alt="Stom PRO">
+                                        <span>Stom PRO</span>
+                                    </div>
                                 </td>
                                 <td class="product-price">
-                                    <span>7 990.00₽/мес</span>
+                                    <span>7 950.00₽/мес</span>
                                 </td>
                                 <td class="product-version">
                                     <div class="product-version__items">
@@ -261,7 +288,8 @@
                 <div class="col-md-6 col-12 usefull-news d-flex">
                     <div class="news__poster">
                         <a href="/">
-                            <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
+                            <img class="rounded" src="./images/usefull-1.jpg"
+                                alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
                         </a>
                     </div>
                     <div class="news__body">
@@ -274,7 +302,8 @@
                             </div>
                         </div>
                         <div class="news__title">
-                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия</h3>
+                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия
+                            </h3>
                         </div>
                         <div class="news__link mt-auto">
                             <a href="/" class="d-flex align-items-center">
@@ -287,7 +316,8 @@
                 <div class="col-md-6 col-12 usefull-news d-flex">
                     <div class="news__poster">
                         <a href="/">
-                            <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
+                            <img class="rounded" src="./images/usefull-1.jpg"
+                                alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
                         </a>
                     </div>
                     <div class="news__body">
@@ -300,7 +330,8 @@
                             </div>
                         </div>
                         <div class="news__title">
-                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия</h3>
+                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия
+                            </h3>
                         </div>
                         <div class="news__link mt-auto">
                             <a href="/" class="d-flex align-items-center">
@@ -313,7 +344,8 @@
                 <div class="col-md-6 col-12 usefull-news d-flex">
                     <div class="news__poster">
                         <a href="/">
-                            <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
+                            <img class="rounded" src="./images/usefull-1.jpg"
+                                alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
                         </a>
                     </div>
                     <div class="news__body">
@@ -326,7 +358,8 @@
                             </div>
                         </div>
                         <div class="news__title">
-                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия</h3>
+                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия
+                            </h3>
                         </div>
                         <div class="news__link mt-auto">
                             <a href="/" class="d-flex align-items-center">
@@ -339,7 +372,8 @@
                 <div class="col-md-6 col-12 usefull-news d-flex">
                     <div class="news__poster">
                         <a href="/">
-                            <img class="rounded" src="./images/usefull-1.jpg" alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
+                            <img class="rounded" src="./images/usefull-1.jpg"
+                                alt="Новый способ профилактики кариеса с помощью наночистиц оксида церия">
                         </a>
                     </div>
                     <div class="news__body">
@@ -352,7 +386,8 @@
                             </div>
                         </div>
                         <div class="news__title">
-                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия</h3>
+                            <h3 class="header-3">Новый способ профилактики кариеса с помощью наночистиц оксида церия
+                            </h3>
                         </div>
                         <div class="news__link mt-auto">
                             <a href="/" class="d-flex align-items-center">
@@ -371,7 +406,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <h2 class="header-2">
-                        Отзывы о CRM               
+                        Отзывы о CRM
                     </h2>
                     <div class="link-all-reviews">
                         <a href="/">Все отзывы</a>
@@ -388,7 +423,8 @@
                     <div class="review__title">Это лучшая CRM</div>
                     <div class="review__message">
                         <span class="review__text">
-                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
+                            В 2015 году долго искал программу для своей косметологической клиники/ Сравнила как и онлайн
+                            сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс...
                         </span>
                         <a href="/">читать дальше</a>
                     </div>
@@ -401,7 +437,8 @@
                     <div class="review__title">Это лучшая CRM</div>
                     <div class="review__message">
                         <span class="review__text">
-                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
+                            В 2015 году долго искал программу для своей косметологической клиники/ Сравнила как и онлайн
+                            сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс...
                         </span>
                         <a href="/">читать дальше</a>
                     </div>
@@ -414,7 +451,8 @@
                     <div class="review__title">Это лучшая CRM</div>
                     <div class="review__message">
                         <span class="review__text">
-                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
+                            В 2015 году долго искал программу для своей косметологической клиники/ Сравнила как и онлайн
+                            сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс...
                         </span>
                         <a href="/">читать дальше</a>
                     </div>
@@ -427,7 +465,8 @@
                     <div class="review__title">Это лучшая CRM</div>
                     <div class="review__message">
                         <span class="review__text">
-                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
+                            В 2015 году долго искал программу для своей косметологической клиники/ Сравнила как и онлайн
+                            сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс...
                         </span>
                         <a href="/">читать дальше</a>
                     </div>
@@ -440,7 +479,8 @@
                     <div class="review__title">Это лучшая CRM</div>
                     <div class="review__message">
                         <span class="review__text">
-                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
+                            В 2015 году долго искал программу для своей косметологической клиники/ Сравнила как и онлайн
+                            сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс...
                         </span>
                         <a href="/">читать дальше</a>
                     </div>
@@ -453,7 +493,8 @@
                     <div class="review__title">Это лучшая CRM</div>
                     <div class="review__message">
                         <span class="review__text">
-                            В 2015 году долго искал программу для  своей косметологической клиники/ Сравнила как и онлайн сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс... 
+                            В 2015 году долго искал программу для своей косметологической клиники/ Сравнила как и онлайн
+                            сервис так и офнлайн. Превым делом прпробовала >с. и поняла что сложно плюс...
                         </span>
                         <a href="/">читать дальше</a>
                     </div>
@@ -579,7 +620,8 @@
                         </div>
                         <div class="instruction__icon ml-auto">
                             <a href="/">
-                                <img src="./images/arrow-bar-down.svg" alt="Что такое программное обеспечение для стоматологической практики?">
+                                <img src="./images/arrow-bar-down.svg"
+                                    alt="Что такое программное обеспечение для стоматологической практики?">
                             </a>
                         </div>
                     </div>
@@ -593,7 +635,8 @@
                         </div>
                         <div class="instruction__icon ml-auto">
                             <a href="/">
-                                <img src="./images/arrow-bar-down.svg" alt="Преимущества программного обеспечения для стоматологической практики?">
+                                <img src="./images/arrow-bar-down.svg"
+                                    alt="Преимущества программного обеспечения для стоматологической практики?">
                             </a>
                         </div>
                     </div>
@@ -607,7 +650,8 @@
                         </div>
                         <div class="instruction__icon ml-auto">
                             <a href="/">
-                                <img src="./images/arrow-bar-down.svg" alt="Типичные особенности программного обеспечения для стоматологической практики?">
+                                <img src="./images/arrow-bar-down.svg"
+                                    alt="Типичные особенности программного обеспечения для стоматологической практики?">
                             </a>
                         </div>
                     </div>
@@ -637,13 +681,21 @@
 
 
 
-    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="//cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
+    <script src="./js/mmenu-light.js"></script>
+    <script src="./js/mmenu-light.polyfills.js"></script>
 
     <script src="./js/main.js"></script>
 </body>
