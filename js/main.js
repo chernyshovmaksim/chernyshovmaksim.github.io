@@ -1,24 +1,3 @@
-document.addEventListener(
-    "DOMContentLoaded", () => {
-        const menu = new MmenuLight(
-            document.querySelector("#mobile-menu")
-        );
-
-        const navigator = menu.navigation({
-            title: 'Рейтинг CRM для стоматологий'
-        });
-        const drawer = menu.offcanvas();
-
-        document.querySelector('a[href="#mobile-menu"]')
-            .addEventListener('click', (evnt) => {
-                evnt.preventDefault();
-                drawer.open();
-            });
-    }
-);
-
-
-
 $(document).ready(function () {
     init();
 });
@@ -27,6 +6,22 @@ $(window).on('orientationchange', function () {
     $('.reviews-wrapper').slick('resize');
 });
 
+var mMenuInit = function(){
+    const menu = new MmenuLight(
+        document.querySelector("#mobile-menu")
+    );
+
+    const navigator = menu.navigation({
+        title: 'Рейтинг CRM для стоматологий'
+    });
+    const drawer = menu.offcanvas();
+
+    document.querySelector('a[href="#mobile-menu"]')
+        .addEventListener('click', (evnt) => {
+            evnt.preventDefault();
+            drawer.open();
+        });
+};
 
 var reviewCarouselInit = function () {
     $('.reviews-wrapper').slick({
@@ -72,8 +67,43 @@ var tableProductsInit = function () {
     });
 };
 
+var productsFilterInit = function () {
+    var filterIcon = $('.filter-icon');
+    var filterBody = $('.filter-body');
+    var filterClean = $('.filter-clear');
+    var filterSearch = $('.filter-search');
+
+    $(filterIcon).on('click', function(e){
+        e.preventDefault();
+        filterBody.toggleClass('filter-body--hidden');
+    });
+    $(filterClean).on('click', function(e){
+        e.preventDefault();
+        filterBody.toggleClass('filter-body--hidden');
+        $('.grid-products input:checkbox').prop('checked', false);
+    });
+    $(filterSearch).on('click', function(e){
+        e.preventDefault();
+        var params = {
+            productVersion: false,
+        };
+        var checkboxEls = $('input[type="checkbox"][data-product]');
+        checkboxEls.each(function(){
+            if($(this).is(':checked')){
+                if($(this).data().productVersion){
+                    console.log($(this).data().productVersion);
+                }
+            }
+        });
+
+        filterBody.toggleClass('filter-body--hidden');
+    });
+};
+
 
 function init() {
     reviewCarouselInit();
     tableProductsInit();
+    mMenuInit();
+    productsFilterInit();
 };
