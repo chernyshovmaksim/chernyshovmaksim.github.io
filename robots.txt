@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /checkit*
-Disallow: *comment-page*
-Host: www.blog-sadovoda.ru
