@@ -900,8 +900,8 @@ img.lazy{
     width: 10rem;
   }
 
-  .md\:gap-2 {
-    gap: 0.5rem;
+  .md\:gap-4 {
+    gap: 1rem;
   }
 
   .md\:grid-cols-2 {
