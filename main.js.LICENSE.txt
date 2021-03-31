@@ -1,3 +1,0 @@
-/*!
- * Button visually impaired v2.0
- */
