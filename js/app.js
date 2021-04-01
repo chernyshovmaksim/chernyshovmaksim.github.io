@@ -11,7 +11,9 @@ require('./modules/lazyload');
 
 
 $(document).ready(function () {
-	$('.slider').slick();
+	$('.slider').slick({
+		autoplay: true
+	});
 
 	IMask(document.querySelector('.popup__tel'), {
 		mask: '+{7}(000)000-00-00'
